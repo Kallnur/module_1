@@ -1,0 +1,13 @@
+:root{
+    --main-color: #222222;
+    --main-fonts: 'Poppins';
+    --white-color: #fff;
+    --container-width: 85%;
+    --fs-1: 3.7rem;
+    --fs-2: 2rem;
+    --fs-2_5: 1.5rem;
+    --fs-3: 16px;
+    --fs-4: .98rem;
+    --num-size-1: 6.5rem;
+    --num-size-2: 6rem;
+}

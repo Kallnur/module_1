@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-fonts);
+}
+a{text-decoration: none;}
+ul, ol{list-style: none;}
+
+button{cursor: pointer;}
+
+.container{
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
