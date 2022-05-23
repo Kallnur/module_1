@@ -56,4 +56,9 @@
     .pricing__list, .testimonials__list{justify-content: center;}
     .pricing__item, .testimonials__item{width: 70%;}
     .faq__item{width: 90%;}
+    .modal__body{
+        width: 70%;
+        padding: 40px 30px 55px;
+    }
+
 }

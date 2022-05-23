@@ -160,3 +160,5 @@
 
 .input--warn > input{background: #FFEEEE !important;}
 .input--warn::before{opacity: 1;}
+
+.modal__body--loading .modal__loading{display: block;}

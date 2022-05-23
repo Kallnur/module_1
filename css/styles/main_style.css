@@ -61,7 +61,7 @@ button{cursor: pointer; outline: none; background: none; border: none;}
     letter-spacing: 1.5px;
 }
 
-.title-l2{
+.title-l1{
     font-size: var(--fs-2);
     font-weight: 400;
     line-height: 40px;

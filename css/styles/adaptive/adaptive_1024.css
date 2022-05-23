@@ -13,5 +13,6 @@
     .description__item{padding: 2rem 0;}
     .description__img > img{height: 550px;}
     .pricing__item, .testimonials__item{width: 30%;}
-    
+    .modal__body{width: 50%;}
+    .modal__title{width: 90%;}
 }

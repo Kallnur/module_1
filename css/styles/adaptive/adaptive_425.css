@@ -15,4 +15,6 @@
     .timer-block__item span:last-child{font-size: var(--fs-mini); margin-top: -.4rem;}
     .features__item{width: 100%;}
     .testimonials__item{width: 95%;}
+    .modal__title > h3{font-size: var(--fs-3);}
+    .modal__body{width: 100%;}
 }
