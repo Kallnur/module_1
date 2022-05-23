@@ -1,0 +1,9 @@
+@media screen and (max-width: 1440px) {
+    .features__item{height: 600px;}
+    .description__img > img{height: 850px;}
+    .pricing__item-price{font-size: calc(var(--num-size-2) + 6px);}
+    .pricing__btn{
+        width: 130px;
+        height: 40px;
+    }
+}

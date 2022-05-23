@@ -1,0 +1,19 @@
+.block-download{
+    background: var(--white-color);
+    padding:  var(--pt-size) 0 130px 0;
+}
+
+.block-download__body{text-align: center;}
+
+.block-download__title{
+    width: var(--title-block-width);
+    margin: 0 auto;
+}
+
+.block-download__title > h1{margin-bottom: .7rem;}
+
+.block-download__title > span{color: var(--info-color);}
+
+.block-download__icon{
+    margin-top: 1.8rem;
+}

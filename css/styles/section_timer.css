@@ -1,12 +1,14 @@
 .timer-block{
     position: relative;
     padding: 70px 0;
-    background-image: url('../../images/fon/timer_fon.jpg');
+    background-image: url('../../images/bg/timer_fon.jpg');
     background-size: cover;
+    z-index: -1;
+    overflow: hidden;
 }
 .timer-block__body{
     position: relative;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -21,14 +23,18 @@
     font-weight: 700;
 }
 .timer-block__title > span{
+    display: block;
     font-size: var(--fs-2);
     font-weight: 700;
 }
+
+.timer-block__list{width: 100%;}
 
 .timer-block__item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .timer-block__item span:first-child{

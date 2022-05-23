@@ -1,13 +1,27 @@
 :root{
     --main-color: #222222;
-    --main-fonts: 'Poppins';
+    --red-color: #FF5437;
     --white-color: #fff;
+    --sec-color: #f2f2f2;
+    --strong-sec-color: #E5E5E5;
+    --info-color: #666666;
+    --main-fonts: 'Poppins';
     --container-width: 85%;
+    --subcontain-width: 76%;
+    --pt-size: 100px;
     --fs-1: 3.7rem;
     --fs-2: 2rem;
     --fs-2_5: 1.5rem;
     --fs-3: 16px;
-    --fs-4: .98rem;
+    --fs-4: .90rem;
+    --fs-mini: .75rem;
     --num-size-1: 6.5rem;
     --num-size-2: 6rem;
+    --title-block-width: 567px;
+    --toggle-color: #fff;
+    --toggle-bg: #222222;
+    --active-color: #FF9209;
+    --plan-premium-color: #FF5437;
+    --plan-standart-color: #0278ED;
+    --plan-lifetime-color: #FF9209;
 }

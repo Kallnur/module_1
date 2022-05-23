@@ -1,0 +1,83 @@
+.pricing{
+    background: var(--white-color);
+    padding: var(--pt-size) 0 100px 0;
+}
+
+.pricing__title{
+    text-align: center;
+    width: var(--title-block-width);
+    margin: 0 auto 2.5rem;
+}
+
+.pricing__title > span{color: var(--info-color);}
+
+.pricing__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pricing__item{
+    flex-direction: column;
+    background: var(--sec-color);
+    border-radius: 20px;
+    width: 32%;
+    height: 350px;
+}
+.pricing__item-info{
+    display: flex;
+    flex-direction: column;
+}
+.pricing__item-info > strong{
+    font-weight: 400;
+    font-size: calc(var(--fs-3) + 2px);
+    line-height: 25px;
+    margin-bottom: -2rem;
+}
+
+.pricing__item-price{
+    font-size: calc(var(--num-size-1) + 6px);
+}
+.pricing__item-time{
+    font-weight: 400;
+    font-size: var(--fs-4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.2rem;
+}
+
+.pricing__btn{
+    position: relative;
+    width: 160px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.pricing__item--standart .pricing__item-price, .pricing__item--standart strong {color: var(--plan-standart-color);}
+.pricing__item--standart button{background: var(--plan-standart-color);}
+
+.pricing__item--premium .pricing__item-price, .pricing__item--premium strong {color: var(--plan-premium-color);}
+.pricing__item--premium button{background: var(--plan-premium-color);}
+
+.pricing__item--lifetime .pricing__item-price, .pricing__item--lifetime strong {color: var(--plan-lifetime-color);}
+.pricing__item--lifetime button{background: var(--plan-lifetime-color);}
+
+.pricing__btn::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+    left: 0;
+    top: 0;
+    transform: translateX(-105%);
+    transition: .3s;
+    z-index: -1;
+}
+.pricing__btn:hover{color: var(--main-color);}
+
+.pricing__item--premium button::before{transform: translateY(105%);}
+.pricing__item--lifetime button::before{transform: translateX(105%);}
+
+.pricing__btn:hover::before{transform: translateX(0);}
+.pricing__item--premium button:hover::before{transform: translateY(0);}

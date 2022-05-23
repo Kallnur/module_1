@@ -1,0 +1,30 @@
+.faq{
+    background: var(--strong-sec-color);
+    padding: var(--pt-size) 0 110px 0;
+}
+
+.faq__title{margin-bottom: 2.5rem;}
+
+.faq__title > h1{
+    font-weight: 400;
+    font-size: var(--fs-2);
+}
+
+.faq__title > span{font-size: var(--fs-4);}
+
+.faq__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.faq__item{width: 48%;}
+
+.faq__quary{
+    font-size: calc(var(--fs-3) + 2px);
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.faq__answer{font-size: var(--fs-3);}

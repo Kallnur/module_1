@@ -1,6 +1,9 @@
 .header{
     height: 90px;
+    width: 100%;
 }
+
+.header__mobile, .header__burger{display: none;}
 
 .header__body{
     position: fixed;
@@ -10,7 +13,9 @@
     height: 90px;
     display: flex;
     align-items: center;
+    background: var(--white-color);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10;
 }
 
 .header__logo-block{cursor: pointer;}
@@ -41,15 +46,7 @@
 .header__navbar-item button{
     height: 45px;
     padding: 12px 44px;
-    outline: none;
-    border: 2px solid var(--main-color);
-    background: var(--main-color);
-    color: var(--white-color);
-    border-radius: 4px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     margin-left: 20px;
-    transition: .4s;
     font-size: var(--fs-3);
 }
 
@@ -65,8 +62,3 @@
 }
 .header__navbar-item > span:hover{color: var(--main-color);}
 .header__navbar-item > span:hover::before{width: 100%; left: 0;}
-
-.header__navbar-item button:hover{
-    background: var(--white-color);
-    color: var(--main-color);
-}

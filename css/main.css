@@ -1,3 +1,20 @@
 @import './styles/main_style.css';
 @import './styles/header.css';
 @import './styles/section_timer.css';
+@import './styles/section_about.css';
+@import './styles/section_features.css';
+@import './styles/block_quality.css';
+@import './styles/section_description.css';
+@import './styles/section_color_scheme.css';
+@import './styles/section_pricing.css';
+@import './styles/section_testimonials.css';
+@import './styles/block_download.css';
+@import './styles/section_faq.css';
+@import './styles/block_modal.css';
+
+/* Adaptive styles */
+
+@import './styles/adaptive/adaptive_1440.css';
+@import './styles/adaptive/adaptive_1024.css';
+@import './styles/adaptive/adaptive_768.css';
+@import './styles/adaptive/adaptive_425.css';

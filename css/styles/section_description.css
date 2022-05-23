@@ -1,0 +1,21 @@
+.description__list{
+    position: relative;
+}
+.description__item:nth-child(odd){background: var(--white-color);}
+.description__item:nth-child(even){background: var(--sec-color);}
+
+.description__item > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description__txt{width: 40%;}
+.description__txt > span{color: var(--info-color);}
+
+.description__img{overflow: hidden;}
+
+.description__img > img{
+    height: 820px;
+    transform: translateY(25%);
+}

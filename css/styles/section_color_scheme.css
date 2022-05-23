@@ -1,0 +1,60 @@
+.toggle-color-scheme{
+    background: var(--main-color);
+    padding:  var(--pt-size) 0 160px 0;
+}
+
+.toggle-color-scheme__body{
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.toggle-color-scheme__body * {color: var(--toggle-color);}
+
+.toggle-color-scheme__title{
+    width: var(--title-block-width);
+    text-align: center;
+}
+
+.toggle-color-scheme__title > span{font-size: calc(var(--fs-3) + 2px)}
+
+.toggle-color-scheme__title > .title-l2 > span{color: var(--active-color)}
+
+.toggle-color-scheme__img{
+    position: relative;
+    width: 42%;
+    border-bottom: 2px solid #E5E5E5;
+}
+.toggle-color-scheme__img > img{
+    width: 60%;
+    float: left;
+}
+
+.toggle-color-scheme__btns{
+    gap: 2.5rem;
+}
+
+.toggle-color-scheme__btns button{
+    flex-direction: column;
+    gap: 5.55px;
+}
+
+.toggle-color-scheme__btns button span{
+    font-size: var(--fs-4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.toggle-color-scheme__btns button path{fill: var(--toggle-color);}
+
+.toggle-color-scheme--dark > div > .toggle-color-scheme__btns > button:last-child path{fill: var(--active-color);}
+.toggle-color-scheme--light > div > .toggle-color-scheme__btns > button:first-child path{fill: var(--active-color);}
+
+.toggle-color-scheme--dark > div > .toggle-color-scheme__btns > button:last-child span{
+    color: var(--active-color);
+}
+
+.toggle-color-scheme--light > div > .toggle-color-scheme__btns > button:first-child span{
+    color: var(--active-color);
+}

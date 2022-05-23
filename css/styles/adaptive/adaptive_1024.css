@@ -1,0 +1,17 @@
+@media screen and (max-width: 1024px) {
+    :root{
+        --fs-1: 3rem;
+        --fs-2: 1.5rem;
+        --num-size-1: 6rem;
+        --num-size-2: 4.5rem;
+    }
+    .about__img > img{width: 280px;}
+    .header__navbar-list{gap: 20px;}
+    .header__navbar-item button{padding: 7px 28px;}
+    .timer-block__item span:first-child::before{width: 8px;}
+    .features__item{width: 47.5%;}
+    .description__item{padding: 2rem 0;}
+    .description__img > img{height: 550px;}
+    .pricing__item, .testimonials__item{width: 30%;}
+    
+}
