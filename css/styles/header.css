@@ -34,10 +34,10 @@
     align-items: center;
 }
 
-.header__navbar-item > span{
+.header__navbar-links{
     position: relative;
     font-weight: 400;
-    color: #666666;
+    color: var(--info-color);
     font-size: var(--fs-4);
     letter-spacing: .3px;
     cursor: pointer;
