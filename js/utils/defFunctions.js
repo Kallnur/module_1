@@ -1,10 +1,17 @@
-export const winScrollTop = (sections, href) => {
+export const winAutoScroll = (sections, href) => {
     sections.forEach(section => {
-        const classes = section.classList.map(tagClass => tagClass);
-        console.log(classes);
+        if(section.classList.contains(href.toLowerCase())){
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: "smooth"
+            })
+        }
     })
-    // window.screenTop({
-    //     top: section.offsetTop,
-    //     smoorh: behavior
-    // })
+}
+
+export const winResetScroll = () => {
+    window.scrollTo({
+        top: 0, 
+        behavior: "smooth"
+    })
 }
