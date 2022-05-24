@@ -10,6 +10,7 @@
 }
 
 .modal__body{
+    position: relative;
     width: 35%;
     padding: 40px 90px 55px;
     background: var(--white-color);
@@ -154,11 +155,37 @@
     display: none;
 }
 
+.modal__close{
+    position: absolute;
+    top: 29px;
+    right: 29px;
+}
+
 .modal__loading > span {color: #7E7E7E;}
+
+.modal__loading > img{
+    margin-right: .5rem;
+    animation: loading 1s linear infinite;
+}
 
 .modal--open{display: flex;}
 
-.input--warn > input{background: #FFEEEE !important;}
-.input--warn::before{opacity: 1;}
-
 .modal__body--loading .modal__loading{display: block;}
+
+.valid_err > input{background: #FFEEEE !important;}
+.valid_err_length > input{background: #FFEEEE !important;}
+
+.valid_err::before{
+    content: 'required field'; 
+    opacity: 1;
+}
+.valid_err_length::before{
+    content: 'should be more then 3 symbols'; 
+    opacity: 1;
+}
+
+
+@keyframes loading {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}

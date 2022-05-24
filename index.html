@@ -12,35 +12,41 @@
 <body>
     <div class="modal block-flex-center">
         <div class="modal__body">
+            <button class="modal__close">
+                <img src="./images/svg/close.svg" alt="Close Icon">
+            </button>
             <div class="modal__title">
                 <h3>Leave a request for the purchase of goods</h3>
             </div>
             <div class="modal__form-block">
-                <form>
+                <form id="modal-form">
                     <div class="modal__form-body block-flex-center">
                         <div class="modal__user-data block-flex-center">
                             <div class="modal__user-input">
-                                <input type="text" placeholder="name">
+                                <input type="text" placeholder="name" id="form-name" required>
                             </div>
                             <div class="modal__user-input">
-                                <input type="email" placeholder="email">
+                                <input type="email" placeholder="email" id="form-email" required>
                             </div>
                         </div>
                         <div class="modal__plan block-flex-center">
                             <span>Your plan?</span>
                             <div class="modal__plan-radio">
                                 <img src="./images/svg/check.svg" alt="Icon check">
-                                <input type="radio" name="plan" id="radio-standart">
+                                <input type="radio" name="plan" 
+                                    id="radio-standart" data-radio-plan="standart" class="modal__radio">
                                 <label class="modal-plan-standart block-flex-center" for="radio-standart">Standart</label>
                             </div>
                             <div class="modal__plan-radio">
                                 <img src="./images/svg/check.svg" alt="Icon check">
-                                <input type="radio" name="plan" id="radio-premium">
+                                <input type="radio" name="plan" 
+                                    id="radio-premium" data-radio-plan="premium" class="modal__radio">
                                 <label class="modal-plan-premium block-flex-center" for="radio-premium">Premium</label>
                             </div>
                             <div class="modal__plan-radio">
                                 <img src="./images/svg/check.svg" alt="Icon check">
-                                <input type="radio" name="plan" id="radio-lifetime">
+                                <input type="radio" name="plan" checked
+                                    id="radio-lifetime"  data-radio-plan="lifetime" class="modal__radio">
                                 <label class="modal-plan-lifetime block-flex-center" for="radio-lifetime">Lifetime</label>
                             </div>
                         </div>
@@ -78,11 +84,11 @@
                             </div>
                         </div>
                         <div class="modal__btn">
-                            <button class="btn" type="submit">
+                            <button class="btn" type="submit" id="btn-submit">
                                 send
                             </button>
                         </div>
-                        <div class="modal__loading">
+                        <div class="modal__loading block-flex-center">
                             <img src="./images/svg/load.svg" alt="Loading Icon">
                             <span>Loading...</span>
                         </div>
@@ -102,16 +108,16 @@
                     </div>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
-                            <a href="#" class="header__navbar-links">Features</a>
+                            <a href="#features" class="header__navbar-links">Features</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#" class="header__navbar-links">Pricing</a>
+                            <a href="#pricing" class="header__navbar-links">Pricing</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#" class="header__navbar-links">Testimonials</a>
+                            <a href="#testimonials" class="header__navbar-links">Testimonials</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#" class="header__navbar-links">FAQ</a>
+                            <a href="#faq" class="header__navbar-links">FAQ</a>
                         </li>
                         <li class="header__navbar-item">
                             <form action="https://example.com" target="_blank">
@@ -185,7 +191,7 @@
                 </div>
             </div>
         </section>
-        <section class="features">
+        <section id="features" class="features">
             <div class="container">
                 <div class="features__title title-block">
                     <strong class="strong-title">Features</strong>
@@ -327,7 +333,7 @@
                 </div>
             </div>
         </section>
-        <section class="pricing">
+        <section id="pricing" class="pricing">
             <div class="container">
                 <div class="pricing__title">
                     <strong class="strong-title">Pricing</strong>
@@ -341,7 +347,7 @@
                             <span class="pricing__item-price">$9</span>
                             <span class="pricing__item-time">Monthly</span>
                         </div>
-                        <button class="pricing__btn btn btn-buy-now btn-buy-now--standart">Buy now</button>
+                        <button data-btn-plan="standart" class="pricing__btn btn btn-buy-now">Buy now</button>
                     </li>
                     <li class="pricing__item pricing__item--premium block-flex-center">
                         <div class="pricing__item-info  block-flex-center">
@@ -349,7 +355,7 @@
                             <span class="pricing__item-price">$99</span>
                             <span class="pricing__item-time">Annually</span>
                         </div>
-                        <button class="pricing__btn btn btn-buy-now btn-buy-now--premium">Buy now</button>
+                        <button data-btn-plan="premium" class="pricing__btn btn btn-buy-now">Buy now</button>
                     </li>
                     <li class="pricing__item pricing__item--lifetime block-flex-center">
                         <div class="pricing__item-info  block-flex-center">
@@ -357,12 +363,12 @@
                             <span class="pricing__item-price">$149</span>
                             <span class="pricing__item-time">up front</span>
                         </div>
-                        <button class="pricing__btn btn btn-buy-now btn-buy-now--lifetime">Buy now</button>
+                        <button data-btn-plan="lifetime" class="pricing__btn btn btn-buy-now">Buy now</button>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="testimonials">
+        <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="testimonials__title">
                     <strong class="strong-title">Testimonials</strong>
@@ -414,7 +420,7 @@
                 </div>
             </div>
         </div>
-        <section class="faq">
+        <section id="faq" class="faq">
             <div class="container">
                 <div class="faq__title">
                     <h1>FAQ</h1>
