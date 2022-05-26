@@ -22,7 +22,6 @@ export const sendForm = () => {
 
     if(userEmail.value.length > 2 && userName.value.length > 2 && checkbox.length){
         modalBody.classList.add('modal__body--loading');
-        console.log('IS Valid!');
         setTimeout(() => {
             userEmail.value = ''; userName.value = '';
             modal.classList.remove('modal--open');

@@ -5,3 +5,9 @@ export const validStr = (str, elem) => {
         elem.parentElement.classList.remove('valid_err_length', 'valid_err')
     }
 }
+
+export const resizeItemWidth = (list, width) => {
+    list.forEach(item => {
+        item.style.width = width;
+    });
+}

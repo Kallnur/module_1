@@ -31,34 +31,41 @@
 .timer-block__list{width: 100%;}
 
 .timer-block__item{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 20%;
 }
 
 .timer-block__item span:first-child{
     position: relative;
     font-size: var(--num-size-1);
     font-weight: 400;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    /* padding-right: 3rem; */
+    /* padding-left: 3rem; */
 }
 
-.timer-block__item span:first-child::before{
+.timer-block__item::before{
     position: absolute;
     content: '';
-    width: 11px;
-    height: 66%;
+    width: 10px;
+    height: 50%;
     background: var(--white-color);
     top: 17%;
     right: 0;
 }
 
-.timer-block__item:last-child span:first-child::before{display: none;}
+.timer-seconds::before{display: none;}
 
 .timer-block__item span:last-child{
     font-size: var(--fs-2_5);
     font-weight: 700;
     margin-top: -1.4rem;
 }
+
+.timer-days{order: 1;}
+.timer-hours{order: 2;}
+.timer-minutes{order: 3;}
+.timer-seconds{order: 4;}
