@@ -5,8 +5,8 @@ export const sendForm = () => {
           userEmail  = document.querySelector('#form-email'),
           checkboxes = document.querySelectorAll('.modal__checkbox'),
           modal      = document.querySelector('.modal'),
-          modalBody   = document.querySelector('.modal__body'),
-          isValid = false;
+          modalBody  = document.querySelector('.modal__body'),
+          checkboxBlockTxt = document.querySelector('.modal__checkbox-block-txt');
     
     validStr(userName.value, userName);
     validStr(userEmail.value, userEmail);
@@ -16,7 +16,7 @@ export const sendForm = () => {
         if(check.checked) checkbox.push(check); 
     });
     if(!checkbox.length) {
-        alert('How did you know about our app?')
+        checkboxBlockTxt.classList.add('modal__checkbox-warn')
         return false
     }
 
@@ -26,6 +26,7 @@ export const sendForm = () => {
             userEmail.value = ''; userName.value = '';
             modal.classList.remove('modal--open');
             modalBody.classList.remove('modal__body--loading');
+            checkboxBlockTxt.classList.remove('modal__checkbox-warn')
         }, 2000)
     }else console.log('IS FORM NO VALID');
 };

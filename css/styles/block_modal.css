@@ -21,7 +21,7 @@
 .modal__title{
     margin: 0 auto;
     text-align: center;
-    width: 55%;
+    width: 70%;
     margin-bottom: 40px;
 }
 
@@ -97,9 +97,9 @@
 .modal-plan-premium{border: 1px solid var(--plan-premium-color); color: var(--plan-premium-color);}
 .modal-plan-lifetime{border: 1px solid var(--plan-lifetime-color); color: var(--plan-lifetime-color);}
 
+#radio-lifetime:checked + .modal-plan-lifetime{background: var(--plan-lifetime-color); color: var(--white-color);}
 #radio-standart:checked + .modal-plan-standart{background: var(--plan-standart-color); color: var(--white-color);}
 #radio-premium:checked + .modal-plan-premium{background: var(--plan-premium-color); color: var(--white-color);}
-#radio-lifetime:checked + .modal-plan-lifetime{background: var(--plan-lifetime-color); color: var(--white-color);}
 
 .modal__checkbox-block{
     flex-direction: column;
@@ -184,8 +184,18 @@
     opacity: 1;
 }
 
+.modal__checkbox-warn{
+    animation: warn .5s 2 ease-in-out;
+    color: var(--red-color)
+}
 
 @keyframes loading {
     from{transform: rotate(0);}
     to{transform: rotate(360deg);}
+}
+
+@keyframes warn {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+    100%{transform: scale(1.02);}
 }

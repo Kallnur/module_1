@@ -11,3 +11,25 @@ export const resizeItemWidth = (list, width) => {
         item.style.width = width;
     });
 }
+
+export const autoSelectPlan = (modalRadio, btn) => {
+    modalRadio.forEach(inpData => {
+        if(btn.dataset.btnPlan === inpData.dataset.radioPlan) inpData.checked = true;
+        if(!btn.dataset.btnPlan) modalRadio[modalRadio.length - 1].checked = true;
+    })
+}
+
+export const defaultRadioPlan = (radios, pricingPrice) => {
+    let prices = [];
+    pricingPrice.forEach((price, ind) => {prices.push({
+        price: price.textContent,
+        plan: price.dataset.pricingPlan
+    })});
+    let mostExpensive = prices.sort((a,b) => a.price - b.price).pop();
+
+    radios.forEach(radio => {
+        if(radio.dataset.radioPlan === mostExpensive.plan) radio.checked = true;
+    })
+
+    return mostExpensive;
+}

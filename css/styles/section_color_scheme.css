@@ -1,5 +1,5 @@
 .toggle-color-scheme{
-    background: var(--main-color);
+    background: var(--toggle-bg);
     padding:  var(--pt-size) 0 160px 0;
 }
 
@@ -19,7 +19,7 @@
 
 .toggle-color-scheme__title > span{font-size: calc(var(--fs-3) + 2px)}
 
-.toggle-color-scheme__title > .title-l2 > span{color: var(--active-color)}
+#colorSchemeActiveTxt{color: var(--active-color)}
 
 .toggle-color-scheme__img{
     position: relative;

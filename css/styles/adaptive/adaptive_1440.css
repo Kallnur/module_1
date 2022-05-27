@@ -1,4 +1,5 @@
 @media screen and (max-width: 1440px) {
+    .header__navbar-list{gap: 42px;}
     .features__item{height: 600px;}
     .description__img > img{height: 850px;}
     .pricing__item-price{font-size: calc(var(--num-size-2) + 6px);}

@@ -53,14 +53,25 @@
     overflow: hidden;
 }
 
-.pricing__item--standart .pricing__item-price, .pricing__item--standart strong {color: var(--plan-standart-color);}
-.pricing__item--standart button{background: var(--plan-standart-color);}
+.pricing__item--standart * {color: var(--plan-standart-color);}
+.pricing__item--standart button{
+    color: var(--white-color);
+    background: var(--plan-standart-color);
+}
 
-.pricing__item--premium .pricing__item-price, .pricing__item--premium strong {color: var(--plan-premium-color);}
-.pricing__item--premium button{background: var(--plan-premium-color);}
+.pricing__item--premium * {color: var(--plan-premium-color);}
+.pricing__item--premium button{
+    color: var(--white-color);
+    background: var(--plan-premium-color);}
 
-.pricing__item--lifetime .pricing__item-price, .pricing__item--lifetime strong {color: var(--plan-lifetime-color);}
-.pricing__item--lifetime button{background: var(--plan-lifetime-color);}
+
+.pricing__item--lifetime * {color: var(--plan-lifetime-color);}
+.pricing__item--lifetime button{
+    color: var(--white-color);
+    background: var(--plan-lifetime-color);
+}
+
+.pricing__item-time{color: var(--main-color);}
 
 .pricing__btn::before{
     position: absolute;
