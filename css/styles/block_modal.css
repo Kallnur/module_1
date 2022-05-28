@@ -168,7 +168,7 @@
     animation: loading 1s linear infinite;
 }
 
-.modal--open{display: flex;}
+.modal--open{display: flex; overflow: auto;}
 
 .modal__body--loading .modal__loading{display: block;}
 

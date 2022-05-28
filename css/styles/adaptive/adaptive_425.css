@@ -2,16 +2,20 @@
     :root{
         --fs-1: 2.2rem;
         --fs-2: 1.1rem;
-        --num-size-1: 3rem;
+        --num-size-1: 2.5rem;
         --num-size-2: 2.7rem;
     }
 
-
     .container{width: 90%;}
     .header__body{padding: 0;}
-    .timer-block__title > span{margin: 1.5rem 0;}
-    /* .timer-block__list{gap:1rem;} */
-    .timer-block__item span:first-child{padding: 0 2.5rem 0 2.5rem;}
+    .timer-block__body{width: 100%;}
+    .timer-block__title > h1 {line-height: 36px;}
+    .timer-block__title > span{margin: 1rem 0 2.5rem;}
+    .timer-block__item{margin: 0 1rem;}
+    .timer-block__item::before{
+        width: 3.5px;
+        right: -1rem;
+    }
     .timer-block__item span:last-child{font-size: var(--fs-mini); margin-top: -.4rem;}
     .features__item{width: 100%;}
     .testimonials__item{width: 95%;}

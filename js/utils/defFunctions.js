@@ -15,7 +15,6 @@ export const resizeItemWidth = (list, width) => {
 export const autoSelectPlan = (modalRadio, btn) => {
     modalRadio.forEach(inpData => {
         if(btn.dataset.btnPlan === inpData.dataset.radioPlan) inpData.checked = true;
-        if(!btn.dataset.btnPlan) modalRadio[modalRadio.length - 1].checked = true;
     })
 }
 

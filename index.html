@@ -45,7 +45,7 @@
                             </div>
                             <div class="modal__plan-radio">
                                 <img src="./images/svg/check.svg" alt="Icon check">
-                                <input type="radio" name="plan"id="radio-lifetime"  
+                                <input type="radio" name="plan" id="radio-lifetime"  
                                     data-radio-plan="lifetime" class="modal__radio">
                                 <label class="modal-plan-lifetime block-flex-center" for="radio-lifetime">Lifetime</label>
                             </div>
@@ -55,28 +55,28 @@
                             <div class="modal__checkbox-body">
                                 <label> 
                                     <span class="modal__checkbox-txt">Facebook</span>
-                                    <input type="checkbox" class="modal__checkbox">
+                                    <input type="checkbox" class="modal__checkbox" data-social-networks="Facebook">
                                     <span class="modal__icon-check">
                                         <img src="./images/svg/check2.svg" alt="Check icon" class="icon-check">
                                     </span>
                                 </label>
                                 <label> 
                                     <span class="modal__checkbox-txt">Instagram</span>
-                                    <input type="checkbox" class="modal__checkbox">
+                                    <input type="checkbox" class="modal__checkbox" data-social-networks="Instagram">
                                     <span class="modal__icon-check">
                                         <img src="./images/svg/check2.svg" alt="Check icon" class="icon-check">
                                     </span>
                                 </label>
                                 <label> 
                                     <span class="modal__checkbox-txt">Youtube</span>
-                                    <input type="checkbox" class="modal__checkbox">
+                                    <input type="checkbox" class="modal__checkbox" data-social-networks="Youtube">
                                     <span class="modal__icon-check">
                                         <img src="./images/svg/check2.svg" alt="Check icon" class="icon-check">
                                     </span>
                                 </label>
                                 <label>
                                     <span class="modal__checkbox-txt">Other</span>
-                                    <input type="checkbox" class="modal__checkbox">
+                                    <input type="checkbox" class="modal__checkbox" data-social-networks="Other">
                                     <span class="modal__icon-check">
                                         <img src="./images/svg/check2.svg" alt="Check icon" class="icon-check">
                                     </span>
@@ -120,7 +120,7 @@
                             <a href="#faq" class="header__navbar-links">FAQ</a>
                         </li>
                         <li class="header__navbar-item">
-                            <form action="https://example.com" target="_blank">
+                            <form class="form-get-app" target="_blank">
                                 <button class="block-flex-center btn">Get this app</button>
                             </form>
                         </li>
@@ -131,7 +131,9 @@
                     </button>
 
                     <div class="header__mobile block-flex-center">
-                        <span><img src="./images/svg/close.svg" alt="Close"></span>
+                        <span class="header__mobile-close">
+                            <img src="./images/svg/close.svg" alt="Close">
+                        </span>
                         <ul class="header__mobile-list">
                             <li class="header__navbar-item">
                                 <div class="header__logo-block">
@@ -139,16 +141,16 @@
                                 </div>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#features" class="header__navbar-links">Features</a>
+                                <a class="header__navbar-link" href="#features">Features</a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#pricing" class="header__navbar-links">Pricing</a>
+                                <a class="header__navbar-link" href="#pricing">Pricing</a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#testimonials" class="header__navbar-links">Testimonials</a>
+                                <a class="header__navbar-link" href="#testimonials">Testimonials</a>
                             </li>
                             <li class="header__navbar-item">
-                                <a href="#faq" class="header__navbar-links">FAQ</a>
+                                <a class="header__navbar-link" href="#faq">FAQ</a>
                             </li>
                             <li class="header__navbar-item">
                                 <form action="https://example.com">
@@ -390,7 +392,7 @@
                     <span>Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</span>
                 </div>
                 <div class="block-download__icon">
-                    <a href="#">
+                    <a href="#" class="link-get-app" target="_blank">
                         <img src="./images/svg/appstore.svg" alt="Icon appstore">
                     </a>
                 </div>

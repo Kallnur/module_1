@@ -7,7 +7,7 @@ export const sendForm = () => {
           modal      = document.querySelector('.modal'),
           modalBody  = document.querySelector('.modal__body'),
           checkboxBlockTxt = document.querySelector('.modal__checkbox-block-txt');
-    
+
     validStr(userName.value, userName);
     validStr(userEmail.value, userEmail);
     const checkbox = [];
@@ -21,12 +21,21 @@ export const sendForm = () => {
     }
 
     if(userEmail.value.length > 2 && userName.value.length > 2 && checkbox.length){
+        const userPlan         = document.querySelector('.modal__radio:checked'),
+              selectedCheckbox = [];
+        checkbox.forEach(check => selectedCheckbox.push(check.dataset.socialNetworks)) 
         modalBody.classList.add('modal__body--loading');
         setTimeout(() => {
+            console.log({
+                name: userName.value,
+                email: userEmail.value,
+                checkbox: selectedCheckbox,
+                plan: userPlan.dataset.radioPlan
+            });
             userEmail.value = ''; userName.value = '';
             modal.classList.remove('modal--open');
             modalBody.classList.remove('modal__body--loading');
             checkboxBlockTxt.classList.remove('modal__checkbox-warn')
         }, 2000)
-    }else console.log('IS FORM NO VALID');
+    }else console.log('FORM NO VALID');
 };

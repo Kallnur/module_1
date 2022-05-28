@@ -31,7 +31,9 @@
         flex-direction: column;
         background: var(--white-color);
         transform: translateX(110%);
+        transition: .4s;
     }
+    .header__mobile--show{transform: translateX(0);}
     .header__mobile > span{
         position: absolute;
         top: 2rem;
@@ -45,7 +47,11 @@
     .header__mobile-list > li > button{padding: 12px 44px;}
     
     .timer-block__title > span{margin: 2rem 0;}
-    .timer-block__item{margin: 0 1rem 0 1rem;}
+    .timer-block__item{margin: 0 1.5rem;}
+    .timer-block__item::before{
+        width: 5px;
+        right: -1.5rem;
+    }
 
     .about{padding: 0;}
     .about__img{display: none;}
@@ -57,6 +63,7 @@
     .toggle-color-scheme__img{width: 70%;}
     .pricing__list, .testimonials__list{justify-content: center;}
     .pricing__item, .testimonials__item{width: 70%;}
+    .pricing__plan-name {margin-bottom: 0 !important;}
     .faq__item{width: 90%;}
     .modal__body{
         width: 70%;
