@@ -1,4 +1,4 @@
-import { getData } from "./getServ/getData.js";
+import jsonData from "../data/config.json";
 import { colorScheme } from "./scripts/colorScheme.js";
 import { mobileNavbar } from "./scripts/mobileNavbar.js";
 import { openModalBuy } from "./scripts/modalBuy.js";
@@ -7,18 +7,18 @@ import { testimonials } from "./scripts/testimonials.js";
 import { timer } from "./scripts/timer.js";
 import { addLinks } from "./scripts/addLinks.js";
 
-const data = getData();
+import '../css/main.css'
+
 window.onload = () => {
     mobileNavbar();
-    data.then(data => {
-        addLinks(data.appStoreLink);
-        setInterval(() => {
-            timer(data.timerEndDate);
-        }, 1000);
-        pricingPlan(data.plans);
-        testimonials(data.testimonials);
-    });
+    addLinks(jsonData.appStoreLink);
+
+    setInterval(() => {
+        timer(jsonData.timerEndDate);
+    }, 1000);
+
+    pricingPlan(jsonData.plans);
+    testimonials(jsonData.testimonials);
     openModalBuy();
     colorScheme();
 }
-console.log(data);

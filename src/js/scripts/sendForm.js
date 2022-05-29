@@ -1,6 +1,6 @@
 import { validStr } from "../utils/defFunctions.js";
 
-export const sendForm = () => {
+export const sendForm = (closeModal) => {
     const userName   = document.querySelector('#form-name'),
           userEmail  = document.querySelector('#form-email'),
           checkboxes = document.querySelectorAll('.modal__checkbox'),
@@ -20,11 +20,15 @@ export const sendForm = () => {
         return false
     }
 
-    if(userEmail.value.length > 2 && userName.value.length > 2 && checkbox.length){
+    // Ultra Pro Max Validation
+
+    if(userEmail.value.length > 2 && userName.value.length > 2 && checkbox.length){  
         const userPlan         = document.querySelector('.modal__radio:checked'),
               selectedCheckbox = [];
+
         checkbox.forEach(check => selectedCheckbox.push(check.dataset.socialNetworks)) 
         modalBody.classList.add('modal__body--loading');
+
         setTimeout(() => {
             console.log({
                 name: userName.value,
@@ -32,10 +36,13 @@ export const sendForm = () => {
                 checkbox: selectedCheckbox,
                 plan: userPlan.dataset.radioPlan
             });
+
+            closeModal();
             userEmail.value = ''; userName.value = '';
             modal.classList.remove('modal--open');
             modalBody.classList.remove('modal__body--loading');
-            checkboxBlockTxt.classList.remove('modal__checkbox-warn')
+            checkboxBlockTxt.classList.remove('modal__checkbox-warn');
+            
         }, 2000)
     }else console.log('FORM NO VALID');
 };

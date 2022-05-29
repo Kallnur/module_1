@@ -13,14 +13,13 @@ export const openModalBuy = () => {
     const closeModal = () => {
         modal.classList.remove('modal--open');
         document.body.style.overflow = '';
-        console.log('CLOSE MODLA');
         window.removeEventListener('click', closeModal);
     };
 
     const openModal  = (btn) => {
         modal.classList.add('modal--open');
         autoSelectPlan(modalRadio, btn);
-        if(!btn.dataset.btnPlan) console.log(defaultRadioPlan(modalRadio, pricingPrice));
+        if(!btn.dataset.btnPlan) defaultRadioPlan(modalRadio, pricingPrice);
         document.body.style.overflow = 'hidden';
         window.addEventListener('click', closeModal);
     };
@@ -40,6 +39,6 @@ export const openModalBuy = () => {
 
     btnSubmut.addEventListener('click', (e) => {
         e.preventDefault();
-        sendForm();
+        sendForm(closeModal);
     })
 }

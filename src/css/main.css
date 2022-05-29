@@ -1,3 +1,9 @@
+/* Config */
+@import './confugCSS/fonts.css';
+@import './confugCSS/root.css';
+
+/* styles */
+
 @import './styles/main_style.css';
 @import './styles/header.css';
 @import './styles/section_timer.css';
