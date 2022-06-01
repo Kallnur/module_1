@@ -62,3 +62,5 @@
 }
 .header__navbar-item > span:hover{color: var(--main-color);}
 .header__navbar-item > span:hover::before{width: 100%; left: 0;}
+
+.header__mobile-list .header__navbar-item > form > button{margin: 0;}

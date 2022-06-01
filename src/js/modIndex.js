@@ -9,12 +9,14 @@ import { addLinks } from "./scripts/addLinks.js";
 
 import '../css/main.css'
 
+timer(jsonData.timerEndDate);
 window.onload = () => {
     mobileNavbar();
     addLinks(jsonData.appStoreLink);
-
-    setInterval(() => {
-        timer(jsonData.timerEndDate);
+    timer(jsonData.timerEndDate);
+    const timerInterval = setInterval(() => {
+        const timerOnOff = timer(jsonData.timerEndDate);
+        if(timerOnOff === false) clearInterval(timerInterval)
     }, 1000);
 
     pricingPlan(jsonData.plans);

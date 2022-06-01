@@ -13,8 +13,8 @@
         width: 7px;
         right: -2.5rem;
     }
-    .features__item{width: 47.5%;}
-    .description__item{padding: 2rem 0;}
+    .features__item{width: 47.5%; height: 580px;}
+    .description__item{padding: 2rem 0 0 0;}
     .description__img > img{height: 550px;}
     .pricing__item, .testimonials__item{width: 30%;}
     .modal__body{width: 50%;}

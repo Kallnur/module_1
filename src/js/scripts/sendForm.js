@@ -23,7 +23,7 @@ export const sendForm = (closeModal) => {
     // Ultra Pro Max Validation
 
     if(userEmail.value.length > 2 && userName.value.length > 2 && checkbox.length){  
-        const userPlan         = document.querySelector('.modal__radio:checked'),
+        const userPlan         = document.querySelector('.modal__radio:checked + label'),
               selectedCheckbox = [];
 
         checkbox.forEach(check => selectedCheckbox.push(check.dataset.socialNetworks)) 
@@ -34,7 +34,7 @@ export const sendForm = (closeModal) => {
                 name: userName.value,
                 email: userEmail.value,
                 checkbox: selectedCheckbox,
-                plan: userPlan.dataset.radioPlan
+                plan: userPlan.textContent
             });
 
             closeModal();

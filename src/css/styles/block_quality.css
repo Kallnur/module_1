@@ -24,4 +24,5 @@
     font-size: var(--fs-4);
     text-transform: uppercase;
     margin-top: -1rem;
+    letter-spacing: 1.5px;
 }

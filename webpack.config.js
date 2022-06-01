@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -20,8 +21,34 @@ module.exports = {
         minimize: true,
         minimizer: [
             new CssMinimizerPlugin(),
-            new TerserPlugin()
+            new TerserPlugin(),
+            // new ImageMinimizerPlugin({
+            //     minimizer: {
+            //       implementation: ImageMinimizerPlugin.imageminMinify,
+            //       options: {
+            //         plugins: [
+            //           ["imagemin-mozjpeg", { progressive: true }],
+            //           ["imagemin-pngquant", { optimizationLevel: 5 }],
+            //         ],
+            //       },
+            //     },
+            // }),
         ],
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader,'css-loader']
+            },
+            {
+              test: /\.(jpe?g|png|svg)$/i,
+              type: "asset",
+            },
+        ]
+    },
+    devServer: {
+        port: 3000
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -30,7 +57,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         
         new MiniCssExtractPlugin({
-            filename: 'styles.min.css'
+            filename: 'css/styles.min.css'
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -40,13 +67,5 @@ module.exports = {
                 }
             ]
         })
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader,'css-loader']
-            }
-        ]
-    }
+    ]
 }

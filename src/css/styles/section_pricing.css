@@ -35,6 +35,8 @@
     margin-bottom: -2rem;
 }
 
+.pricing__item-info > strong::first-letter{text-transform: uppercase;}
+
 .pricing__item-price{
     font-size: calc(var(--num-size-1) + 6px);
 }
@@ -73,22 +75,6 @@
 
 .pricing__item-time{color: var(--main-color);}
 
-.pricing__btn::before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: var(--white-color);
-    left: 0;
-    top: 0;
-    transform: translateX(-105%);
-    transition: .3s;
-    z-index: -1;
-}
-.pricing__btn:hover{color: var(--main-color);}
-
-.pricing__item--premium button::before{transform: translateY(105%);}
-.pricing__item--lifetime button::before{transform: translateX(105%);}
-
-.pricing__btn:hover::before{transform: translateX(0);}
-.pricing__item--premium button:hover::before{transform: translateY(0);}
+.pricing__item--standart button:hover{background: #006DFF;}
+.pricing__item--premium button:hover{background: #FF0012;}
+.pricing__item--lifetime button:hover{background: #FF7411;}

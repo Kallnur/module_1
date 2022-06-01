@@ -60,14 +60,18 @@
     .block-quality__list{flex-direction: column; gap: 2rem;}
     .description__txt{width: 100%;}
     .description__img{display: none;}
+    .features__item{height: 520px;}
     .toggle-color-scheme__img{width: 70%;}
     .pricing__list, .testimonials__list{justify-content: center;}
     .pricing__item, .testimonials__item{width: 70%;}
     .pricing__plan-name {margin-bottom: 0 !important;}
+    .pricing__item-info > strong{font-size: calc(var(--fs-3) + 4px);}
+    .description__item{padding: 2rem 0;}
     .faq__item{width: 90%;}
     .modal__body{
         width: 70%;
         padding: 40px 30px 55px;
     }
+    .block-quality__item span:last-child{margin: 0;}
 
 }

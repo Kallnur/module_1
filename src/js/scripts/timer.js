@@ -1,14 +1,22 @@
 import { addItemTimer } from "../utils/addItemTimer.js";
-import { resizeItemWidth } from "../utils/defFunctions.js";
+import { deformatDateToISO } from "../utils/defFunctions.js";
 
 export const timer = (endDate) => {
-    const endTime      = Date.parse(endDate) - Date.parse(new Date());  // Format date ISO 8601 or RFC2822
-    const timerList    = document.querySelector('.timer-block__list');
+    const deformatDate = deformatDateToISO(endDate);
+    const endTime    = Date.parse(deformatDate) - Date.parse(new Date());
+    const timerList  = document.querySelector('.timer-block__list');
+    const sectionTimer = document.querySelector('.timer-block');
 
-    let endSeconds = Math.floor((endTime / 1000)),
-        endMinutes = Math.floor((endSeconds / 60)),
-        endHourse  = Math.floor((endMinutes / 60)),
-        endDays    = Math.floor(endHourse / 24);
+    if(endTime < 10){
+        sectionTimer.style.display = 'none';
+        return false;
+    }
+    else sectionTimer.style.display = '';
+
+    const endSeconds = Math.floor((endTime / 1000));
+    const endMinutes = Math.floor((endSeconds / 60));
+    const endHourse  = Math.floor((endMinutes / 60));
+    const endDays    = Math.floor(endHourse / 24);
 
     const timerLimits = {
         days: endDays,
@@ -17,10 +25,5 @@ export const timer = (endDate) => {
         seconds: Math.floor(endSeconds - endMinutes * 60)
     }
 
-    addItemTimer(timerLimits, timerList);
-
-    if(timerList.children.length === 4) resizeItemWidth(timerList.childNodes, '20%')
-    else if (timerList.children.length === 3) resizeItemWidth(timerList.childNodes, '32%')
-    else if (timerList.children.length === 2) resizeItemWidth(timerList.childNodes, '45%')
-    else if (timerList.children.length === 1) resizeItemWidth(timerList.childNodes, '90%')
+    addItemTimer(timerLimits, timerList, sectionTimer);
 }

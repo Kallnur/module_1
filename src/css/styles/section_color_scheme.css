@@ -1,6 +1,7 @@
 .toggle-color-scheme{
     background: var(--toggle-bg);
     padding:  var(--pt-size) 0 160px 0;
+    transition: .5s;
 }
 
 .toggle-color-scheme__body{

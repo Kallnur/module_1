@@ -6,16 +6,16 @@ export const validStr = (str, elem) => {
     }
 }
 
-export const resizeItemWidth = (list, width) => {
-    list.forEach(item => {
-        item.style.width = width;
-    });
-}
-
 export const autoSelectPlan = (modalRadio, btn) => {
     modalRadio.forEach(inpData => {
         if(btn.dataset.btnPlan === inpData.dataset.radioPlan) inpData.checked = true;
     })
+}
+
+export const deformatDateToISO = date => {
+    const dateArr    = date.split(/[.\ ]/).reverse();
+    const hourAndMin = dateArr.shift();
+    return `${dateArr.join('.')} ${hourAndMin}`;
 }
 
 export const defaultRadioPlan = (radios, pricingPrice) => {
