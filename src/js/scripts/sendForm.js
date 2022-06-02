@@ -1,12 +1,12 @@
 import { validStr } from "../utils/defFunctions.js";
 
 export const sendForm = (closeModal) => {
-    const userName   = document.querySelector('#form-name'),
-          userEmail  = document.querySelector('#form-email'),
-          checkboxes = document.querySelectorAll('.modal__checkbox'),
-          modal      = document.querySelector('.modal'),
-          modalBody  = document.querySelector('.modal__body'),
-          checkboxBlockTxt = document.querySelector('.modal__checkbox-block-txt');
+    const userName   = document.querySelector('#form-name');
+    const userEmail  = document.querySelector('#form-email');
+    const checkboxes = document.querySelectorAll('.modal__checkbox');
+    const modal      = document.querySelector('.modal');
+    const modalBody  = document.querySelector('.modal__body');
+    const checkboxBlockTxt = document.querySelector('.modal__checkbox-block-txt');
 
     validStr(userName.value, userName);
     validStr(userEmail.value, userEmail);

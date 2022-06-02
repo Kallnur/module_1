@@ -10,7 +10,7 @@ import { addLinks } from "./scripts/addLinks.js";
 import '../css/main.css'
 
 timer(jsonData.timerEndDate);
-window.onload = () => {
+// window.onload = () => {
     mobileNavbar();
     addLinks(jsonData.appStoreLink);
     timer(jsonData.timerEndDate);
@@ -23,4 +23,4 @@ window.onload = () => {
     testimonials(jsonData.testimonials);
     openModalBuy();
     colorScheme();
-}
+// }

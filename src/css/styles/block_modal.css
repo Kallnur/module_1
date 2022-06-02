@@ -86,6 +86,8 @@
     z-index: 1;
 }
 
+.modal__plan-radio > label:first-letter{text-transform: uppercase;}
+
 .modal__plan-radio > img{
     position: absolute;
     top: 50%;

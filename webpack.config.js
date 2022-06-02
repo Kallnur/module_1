@@ -22,17 +22,17 @@ module.exports = {
         minimizer: [
             new CssMinimizerPlugin(),
             new TerserPlugin(),
-            // new ImageMinimizerPlugin({
-            //     minimizer: {
-            //       implementation: ImageMinimizerPlugin.imageminMinify,
-            //       options: {
-            //         plugins: [
-            //           ["imagemin-mozjpeg", { progressive: true }],
-            //           ["imagemin-pngquant", { optimizationLevel: 5 }],
-            //         ],
-            //       },
-            //     },
-            // }),
+            new ImageMinimizerPlugin({
+                minimizer: {
+                  implementation: ImageMinimizerPlugin.imageminMinify,
+                  options: {
+                    plugins: [
+                      ["imagemin-mozjpeg", { progressive: true }],
+                      ["imagemin-pngquant", { optimizationLevel: 6 }],
+                    ],
+                  },
+                },
+            }),
         ],
     },
     module: {
