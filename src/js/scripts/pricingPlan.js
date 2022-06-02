@@ -3,8 +3,6 @@ export const pricingPlan = (dataPlans) => {
     const tagPlanName     = document.querySelectorAll('.pricing__plan-name');
     const tagRadioPlan    = document.querySelectorAll('.modal__plan-radio > label');
 
-    console.log(tagRadioPlan[0]);
-
     dataPlans.map((plan, ind) => {
         tagPlanName[ind].textContent = plan.name;
         tagPricingPrice[ind].textContent = plan.price;

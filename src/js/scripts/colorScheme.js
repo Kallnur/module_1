@@ -1,9 +1,9 @@
 export const colorScheme = () => {
-    const tagToggleColor   = document.querySelector('.toggle-color-scheme'),
-          btnLight         = document.querySelector('.toggle-color-scheme__btn-light'),
-          btnDark          = document.querySelector('.toggle-color-scheme__btn-dark'),
-          toggleChemeTitle = document.querySelector('#toggleColorChemeTitle'),
-          activeColorTxt   = document.querySelector('#colorSchemeActiveTxt');
+    const tagToggleColor   = document.querySelector('.toggle-color-scheme');
+    const btnLight         = document.querySelector('.toggle-color-scheme__btn-light');
+    const btnDark          = document.querySelector('.toggle-color-scheme__btn-dark');
+    const toggleChemeTitle = document.querySelector('#toggleColorChemeTitle');
+    const activeColorTxt   = document.querySelector('#colorSchemeActiveTxt');
 
     const toggleColorLight = () => {
         tagToggleColor.classList.remove('toggle-color-scheme--dark');

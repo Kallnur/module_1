@@ -10,17 +10,16 @@ import { addLinks } from "./scripts/addLinks.js";
 import '../css/main.css'
 
 timer(jsonData.timerEndDate);
-// window.onload = () => {
-    mobileNavbar();
-    addLinks(jsonData.appStoreLink);
-    timer(jsonData.timerEndDate);
-    const timerInterval = setInterval(() => {
-        const timerOnOff = timer(jsonData.timerEndDate);
-        if(timerOnOff === false) clearInterval(timerInterval)
-    }, 1000);
+mobileNavbar();
+addLinks(jsonData.appStoreLink);
+timer(jsonData.timerEndDate);
 
-    pricingPlan(jsonData.plans);
-    testimonials(jsonData.testimonials);
-    openModalBuy();
-    colorScheme();
-// }
+const timerInterval = setInterval(() => {
+    const timerOnOff = timer(jsonData.timerEndDate);
+    if(timerOnOff === false) clearInterval(timerInterval)
+}, 1000);
+
+pricingPlan(jsonData.plans);
+testimonials(jsonData.testimonials);
+openModalBuy();
+colorScheme();

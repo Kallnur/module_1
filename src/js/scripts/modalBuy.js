@@ -2,13 +2,13 @@ import { autoSelectPlan, defaultRadioPlan } from "../utils/defFunctions.js";
 import { sendForm } from "./sendForm.js";
 
 export const openModalBuy = () => {
-    const modal         = document.querySelector('.modal'),
-          modalBtnClose = document.querySelector('.modal__close'),
-          btnsModalBuy  = document.querySelectorAll('.btn-buy-now'),
-          modalRadio    = document.querySelectorAll('.modal__radio'),
-          pricingPrice  = document.querySelectorAll('.pricing-price'),
-          modalBody     = document.querySelector('.modal__body'),
-          btnSubmut     = document.querySelector('#btn-submit');
+    const modal         = document.querySelector('.modal');
+    const modalBtnClose = document.querySelector('.modal__close');
+    const btnsModalBuy  = document.querySelectorAll('.btn-buy-now');
+    const modalRadio    = document.querySelectorAll('.modal__radio');
+    const pricingPrice  = document.querySelectorAll('.pricing-price');
+    const modalBody     = document.querySelector('.modal__body');
+    const btnSubmut     = document.querySelector('#btn-submit');
 
     const closeModal = () => {
         modal.classList.remove('modal--open');
