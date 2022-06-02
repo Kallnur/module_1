@@ -32,7 +32,7 @@
     font-weight: 400;
     font-size: calc(var(--fs-3) + 2px);
     line-height: 25px;
-    margin-bottom: -2rem;
+    margin-bottom: -1.5rem;
 }
 
 .pricing__item-info > strong::first-letter{text-transform: uppercase;}

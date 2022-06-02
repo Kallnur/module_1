@@ -86,14 +86,21 @@
     z-index: 1;
 }
 
-.modal__plan-radio > label:first-letter{text-transform: uppercase;}
-
 .modal__plan-radio > img{
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
     z-index: 5;
+}
+
+.modal__plan-radio > label > span{
+    display: block;
+    color: inherit;
+}
+
+.modal__plan-radio > label > span:first-letter{
+    text-transform: uppercase;
 }
 
 .modal-plan-standart{border: 1px solid var(--plan-standart-color); color: var(--plan-standart-color);}

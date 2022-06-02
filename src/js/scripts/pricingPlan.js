@@ -4,8 +4,10 @@ export const pricingPlan = (dataPlans) => {
     const tagRadioPlan    = document.querySelectorAll('.modal__plan-radio > label');
 
     dataPlans.map((plan, ind) => {
+        const newSpan = document.createElement('span');
         tagPlanName[ind].textContent = plan.name;
         tagPricingPrice[ind].textContent = plan.price;
-        tagRadioPlan[ind].textContent = plan.name
+        newSpan.textContent = plan.name;
+        tagRadioPlan[ind].append(newSpan);
     })
 }
