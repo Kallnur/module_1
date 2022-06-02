@@ -60,7 +60,12 @@
     font-weight: 400;
     margin: .65rem 0;
 }
-.features__item:nth-child(1):nth-child(1) strong{color: #0278ED;}
+.features__item:nth-child(1) strong{color: #0278ED;}
+.features__item:nth-child(2) strong{color: #FF002B;}
+.features__item:nth-child(3) strong{color: #FF8800;}
+.features__item:nth-child(4) strong{color: #FF00CB;}
+.features__item:nth-child(5) strong{color: #00CCE0;}
+.features__item:nth-child(6) strong{color: #CD00F6;}
 
 .features__item-info > span{
     font-size: var(--fs-4);
